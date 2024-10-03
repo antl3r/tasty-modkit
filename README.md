@@ -1,6 +1,6 @@
-# Tasty ModKit 🍽️
+# Tasty ModKit 🍫
 
-Welcome to **Tasty ModKit**, a powerful mod synchronization tool for non-Steam games. This CLI application helps you manage and update your workshop mods effortlessly, ensuring your game always runs with the latest content.
+Welcome to **Tasty ModKit**, a workshop mod synchronization tool for non-Steam games. This CLI application helps you manage and update your workshop mods effortlessly, ensuring your game always runs with matching workshop mods.
 
 ---
 
@@ -142,4 +142,4 @@ You can now use your GitHub OAuth token in your applications or scripts to authe
 
 **Note**: Treat your OAuth token like a password. Do not share it or expose it in public repositories.
 
-This repository is dedicated to my little guy.
+This repository is dedicated to my Sabileye 🍫.
