@@ -1,7 +1,6 @@
 import subprocess
 import os
 import json
-import requests
 import argparse
 from modlist_downloader import download_from_modlist
 from verify_mods import check_missing

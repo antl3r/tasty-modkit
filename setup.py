@@ -1,4 +1,4 @@
-import distutils.core
+from setuptools import setup, find_packages
 
 setup(
     name='tasty-modkit',
