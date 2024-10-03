@@ -18,6 +18,7 @@ Welcome to **Tasty ModKit**, a powerful mod synchronization tool for non-Steam g
 -   [Contributing](#contributing)
 -   [License](#license)
 -   [Contact](#contact)
+-   [OAuth](#oauth)
 
 ---
 
@@ -41,6 +42,7 @@ To get started, you'll need to have Python installed on your machine. Once Pytho
 
 3. **Configure the settings**:
    Before executing the main script, configure some important settings by opening options.cfg at ./tasty/
+   If you have any trouble with OAuth, or don't know what that is, refer to [OAuth](#oauth)
 
 ---
 
@@ -58,17 +60,17 @@ python main.py [command] [options]
    To check your mod folders for updates, use:
 
     ```bash
-    python main.py check --path /path/to/your/mods
+    python main.py check --path /steamcmd/steamapps/workshop/content/600600/
     ```
 
-    Replace `/path/to/your/mods` with the actual path to your mod folder.
+    Replace `/steamcmd/steamapps/workshop/content/600600/` with the actual path to your mod folder.
 
 2. **Upload Modlist to GitHub Gist**:
    To upload your current mod list, run:
     ```bash
-    python main.py upload --gist-title "My Mod List" --file-path /path/to/modlist.txt
+    python main.py upload --path /steamcmd/steamapps/workshop/content/600600/
     ```
-    Make sure to replace `My Mod List` with your desired Gist title and `/path/to/modlist.txt` with the path to your modlist file.
+    Make sure to replace `--path /steamcmd/steamapps/workshop/content/600600/` with the path to your modlist file.
 
 ---
 
@@ -98,5 +100,46 @@ For any inquiries, suggestions, or feedback, feel free to reach out:
 -   **GitHub**: [antl3r](https://github.com/antl3r)
 
 ---
+
+# Creating a GitHub OAuth Token 🔑
+
+Follow these steps to create a GitHub OAuth token for accessing the GitHub API or integrating with other applications.
+
+## Step 1: Log in to GitHub
+
+1. Open your web browser and go to [GitHub](https://github.com).
+2. Log in to your account.
+
+## Step 2: Navigate to Developer Settings
+
+1. In the top-right corner of the page, click on your profile picture.
+2. From the dropdown menu, select **Settings**.
+3. In the left sidebar, scroll down and click on **Developer settings**.
+
+## Step 3: Create a New OAuth Token
+
+1. Click on **Personal access tokens** in the left sidebar.
+2. Click the **Tokens (classic)** tab.
+3. Click the **Generate new token** button.
+
+## Step 4: Configure Your Token
+
+1. **Note**: You may need to authenticate again.
+2. Give your token a descriptive name in the **Note** field.
+3. Select the scopes or permissions you want to grant this token. For example, if you want to access repositories, check **repo**.
+4. Set an expiration for your token if desired.
+
+## Step 5: Generate and Copy the Token
+
+1. Click the **Generate token** button at the bottom of the page.
+2. **Important**: Copy your new token immediately. You won’t be able to see it again!
+
+## Step 6: Use Your Token
+
+You can now use your GitHub OAuth token in your applications or scripts to authenticate API requests.
+
+---
+
+**Note**: Treat your OAuth token like a password. Do not share it or expose it in public repositories.
 
 This repository is dedicated to my little guy.
