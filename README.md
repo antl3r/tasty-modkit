@@ -42,15 +42,15 @@ bash
 
     python setup.py install
 
-##Usage 🎮
+## Usage 🎮
 
 Once everything is set up, you can run the tool using the following command:
 
-bash
+# bash
 
 python main.py [command] [options]
 
-Commands
+# Commands
 
     Check Mod Folders: To check your mod folders for updates, use:
 
@@ -62,13 +62,13 @@ Replace /path/to/your/mods with the actual path to your mod folder.
 
 Upload Modlist to GitHub Gist: To upload your current mod list, run:
 
-bash
+# bash
 
     python main.py upload --gist-title "My Mod List" --file-path /path/to/modlist.txt
 
     Make sure to replace My Mod List with your desired Gist title and /path/to/modlist.txt with the path to your modlist file.
 
-##Contributing 🤝
+## Contributing 🤝
 
 We welcome contributions! If you want to help improve Tasty ModKit, please fork the repository and submit a pull request.
 
@@ -78,7 +78,7 @@ We welcome contributions! If you want to help improve Tasty ModKit, please fork 
     Push to the branch (git push origin feature/AmazingFeature).
     Open a pull request.
 
-##License 📄
+## License 📄
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 Contact 📫
