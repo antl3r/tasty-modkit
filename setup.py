@@ -9,7 +9,7 @@ setup(
     long_description='',  # Leave blank as per your input
     url='https://github.com/antl3r/tasty-modkit',
     license='MIT',
-    packages=['tasty-modkit.modkit'],
+    packages=['tasty'],
     install_requires=[
         'configparser',
         'requests',
