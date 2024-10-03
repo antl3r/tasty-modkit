@@ -70,7 +70,7 @@ python main.py [command] [options]
     ```bash
     python main.py upload --path /steamcmd/steamapps/workshop/content/600600/
     ```
-    Make sure to replace `--path /steamcmd/steamapps/workshop/content/600600/` with the path to your modlist file.
+    Replace `/steamcmd/steamapps/workshop/content/600600/` with the actual path to your mod folder.
 
 ---
 
