@@ -4,9 +4,9 @@ setup(
     name='tasty-modkit',
     version='0.1.0',
     author='Lovell D\'Arce',
-    author_email='',  # Leave blank as per your input
+    author_email=''
     description='A modkit for synchronizing workshop mods with non-steam games.',
-    long_description='',  # Leave blank as per your input
+    long_description=''
     url='https://github.com/antl3r/tasty-modkit',
     license='MIT',
     packages=['tasty'],
