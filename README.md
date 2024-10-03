@@ -39,11 +39,8 @@ To get started, you'll need to have Python installed on your machine. Once Pytho
     pip install -r requirements.txt
     ```
 
-3. **Run the setup**:
-   Before executing the main script, run the following command to set up any configurations:
-    ```bash
-    python setup.py install
-    ```
+3. **Configure the settings**:
+   Before executing the main script, configure some important settings by opening options.cfg at ./tasty/
 
 ---
 
