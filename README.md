@@ -42,7 +42,8 @@ To get started, you'll need to have Python installed on your machine. Once Pytho
 
 3. **Configure the settings**:
    Before executing the main script, configure some important settings by opening options.cfg at ./tasty/
-   If you have any trouble with OAuth, or don't know what that is, refer to [OAuth](#oauth)
+
+    If you have any trouble with OAuth, or don't know what that is, refer to [OAuth](#oauth)
 
 ---
 
@@ -126,7 +127,7 @@ Follow these steps to create a GitHub OAuth token for accessing the GitHub API o
 
 1. **Note**: You may need to authenticate again.
 2. Give your token a descriptive name in the **Note** field.
-3. Select the scopes or permissions you want to grant this token. For example, if you want to access repositories, check **repo**.
+3. Select the scopes or permissions you want to grant this token. This project only needs **Gists**.
 4. Set an expiration for your token if desired.
 
 ## Step 5: Generate and Copy the Token
