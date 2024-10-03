@@ -6,18 +6,18 @@ Welcome to **Tasty ModKit**, a powerful mod synchronization tool for non-Steam g
 
 ## Features ✨
 
-- **Mod Folder Checking**: Verify your mod installations and ensure everything is up-to-date.
-- **Modlist Upload**: Easily publish your mod list to GitHub Gists, perfect for dedicated server hosts.
+-   **Mod Folder Checking**: Verify your mod installations and ensure everything is up-to-date.
+-   **Modlist Upload**: Easily publish your mod list to GitHub Gists, perfect for dedicated server hosts.
 
 ---
 
 ## Table of Contents 📚
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Contributing](#contributing)
+-   [License](#license)
+-   [Contact](#contact)
 
 ---
 
@@ -26,22 +26,24 @@ Welcome to **Tasty ModKit**, a powerful mod synchronization tool for non-Steam g
 To get started, you'll need to have Python installed on your machine. Once Python is set up, follow these steps:
 
 1. **Clone the repository**:
-   \`\`\`bash
-   git clone https://github.com/antl3r/tasty-modkit.git
-   cd tasty-modkit
-   \`\`\`
+
+    ```bash
+    git clone https://github.com/antl3r/tasty-modkit.git
+    cd tasty-modkit
+    ```
 
 2. **Install dependencies**:
    Ensure all necessary packages are installed. You can do this by running:
-   \`\`\`bash
-   pip install -r requirements.txt
-   \`\`\`
+
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 3. **Run the setup**:
    Before executing the main script, run the following command to set up any configurations:
-   \`\`\`bash
-   python setup.py install
-   \`\`\`
+    ```bash
+    python setup.py install
+    ```
 
 ---
 
@@ -49,36 +51,38 @@ To get started, you'll need to have Python installed on your machine. Once Pytho
 
 Once everything is set up, you can run the tool using the following command:
 
-\`\`\`bash
+```bash
 python main.py [command] [options]
-\`\`\`
+```
 
 ### Commands
 
 1. **Check Mod Folders**:
    To check your mod folders for updates, use:
-   \`\`\`bash
-   python main.py check --path /path/to/your/mods
-   \`\`\`
-   Replace `/path/to/your/mods` with the actual path to your mod folder.
+
+    ```bash
+    python main.py check --path /path/to/your/mods
+    ```
+
+    Replace `/path/to/your/mods` with the actual path to your mod folder.
 
 2. **Upload Modlist to GitHub Gist**:
    To upload your current mod list, run:
-   \`\`\`bash
-   python main.py upload --gist-title "My Mod List" --file-path /path/to/modlist.txt
-   \`\`\`
-   Make sure to replace `My Mod List` with your desired Gist title and `/path/to/modlist.txt` with the path to your modlist file.
+    ```bash
+    python main.py upload --gist-title "My Mod List" --file-path /path/to/modlist.txt
+    ```
+    Make sure to replace `My Mod List` with your desired Gist title and `/path/to/modlist.txt` with the path to your modlist file.
 
 ---
 
 ## Contributing 🤝
 
-We welcome contributions! If you want to help improve Tasty ModKit, please fork the repository and submit a pull request. 
+We welcome contributions! If you want to help improve Tasty ModKit, please fork the repository and submit a pull request.
 
 1. Fork the project.
-2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`).
-3. Commit your changes (\`git commit -m 'Add some amazing feature'\`).
-4. Push to the branch (\`git push origin feature/AmazingFeature\`).
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some amazing feature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
 5. Open a pull request.
 
 ---
@@ -93,10 +97,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any inquiries, suggestions, or feedback, feel free to reach out:
 
-- **Author**: Lovell D'Arce
-- **GitHub**: [antl3r](https://github.com/antl3r)
-- **Email**: your_email@example.com
+-   **Author**: Lovell D'Arce
+-   **GitHub**: [antl3r](https://github.com/antl3r)
 
 ---
 
-Thank you for checking out **Tasty ModKit**! Enjoy syncing your mods! 🎉
+This repository is dedicated to my little guy.
