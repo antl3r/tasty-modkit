@@ -2,32 +2,36 @@ import subprocess
 import os
 import json
 import requests
+import argparse
 from modlist_downloader import download_from_modlist
 from verify_mods import check_missing
 from prompt_user import yes_no_prompt
+from export_modlist import export_modlist_json
 
-# Get the current script's directory
-modkit_directory = os.path.dirname(os.path.abspath(__file__))
+def main():
+    parser = argparse.ArgumentParser(description='Mod Sync Tool for Non-Steam Games')
+    
+    # Define subparsers for different commands
+    subparsers = parser.add_subparsers(dest='command')
 
-# Get the parent directory
-mod_directory = os.path.dirname(modkit_directory)
+    # Subparser for mod check
+    mod_check_parser = subparsers.add_parser('check', help='Check your mod folders')
+    mod_check_parser.add_argument('--path', type=str, required=True, help='Path to the mod folder')
 
-# Define the path to your SteamCMD executable
-steamcmd_directory = os.path.abspath(os.path.join(mod_directory, os.pardir, os.pardir, os.pardir, os.pardir))
-steamcmd_exe = os.path.abspath(os.path.join(steamcmd_directory, "steamcmd.exe"))
+    # Subparser for uploading modlist to GitHub Gist
+    upload_parser = subparsers.add_parser('upload', help='Export modlist / Upload modlist to GitHub Gist')
+    upload_parser.add_argument('--path', type=str, required=True, help='Path to the mod folder')
 
-#Grab AppID from mods directory
-app_id = os.path.basename(mod_directory) 
+    # Parse arguments
+    args = parser.parse_args()
 
-print("\n" + steamcmd_directory + "\n")
-
-missing_ids = check_missing(mod_directory)
-
-if missing_ids:
-    if missing_ids:
-        if yes_no_prompt("There are missing mods! Would you like to download them now?"):
-            download_from_modlist(missing_ids, steamcmd_exe, app_id)
-        else:
-            print("Exiting...")
+    # Execute commands based on user input
+    if args.command == 'check':
+        check_missing(args.path)
+    elif args.command == 'upload':
+        export_modlist_json(args.path)
     else:
-        print("No mods are missing! Quitting this program now...")
+        parser.print_help()
+
+if __name__ == '__main__':
+    main()

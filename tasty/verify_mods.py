@@ -2,8 +2,15 @@ import os
 import requests
 import re
 import json
+from prompt_user import yes_no_prompt
+from modlist_downloader import download_from_modlist
 
 def check_missing(mod_directory):
+    app_id = os.path.basename(mod_directory)
+    
+    steamcmd_directory = os.path.abspath(os.path.join(mod_directory, os.pardir, os.pardir, os.pardir, os.pardir))
+    steamcmd_exe = os.path.abspath(os.path.join(steamcmd_directory, "steamcmd.exe"))
+    
     url = 'https://gist.githubusercontent.com/antl3r/a95bff1abe7378e7f96f351fd039f77b/raw/7be76aad36039d2e71c477d58d8146a5565b886c/modlist_output.json'
     
     response = requests.get(url)
@@ -31,6 +38,11 @@ def check_missing(mod_directory):
         print("Missing subdirectories (from mod_ids):")
         for mod_id in missing_mod_ids:
             print(mod_id)
+            
+        if yes_no_prompt("There are missing mods! Would you like to download them now?"):
+            download_from_modlist(missing_mod_ids, steamcmd_exe, app_id)
+        else:
+            print("Exiting...")
     else:
         print("No subdirectories from mod_ids are missing!")
         
